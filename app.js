@@ -7,7 +7,7 @@ let height = document.getElementById("height");
 let color = document.getElementById("color");
 let bgColor = document.getElementById("bgColor");
 let content = document.getElementById("content");
-let select = document.getElementById("select");
+let select = document.querySelector("select");
 let btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
@@ -26,15 +26,15 @@ btn.addEventListener("click", () => {
 
    container2.append(block);
 
-   document.createElement("div").innerHTML = `
-        <span class="item">${select.value}</span> <br>
+   document.querySelector(".css-block2").innerHTML = `
+        <span class="item">${select.value}</span> { <br>
             <span class="text">width: ${width.value}px</span> <br>
             <span class="text">height: ${height.value}px</span> <br>
             <span class="text">color: "${color.value}"</span> <br>
-            <span class="text">bgColor:"${bgColor.value}"</span> >br>
+            <span class="text">bgColor:"${bgColor.value}"</span> <br>
             <span class="text">content: "${content.value}"</span> <br>
+        }
    `;
-        container3.append(document.createElement("div"));
         let item = document.querySelector(".item");
         item.style.color = "black";
         item.style.fontSize = "20px";
